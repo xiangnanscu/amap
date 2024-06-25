@@ -1,11 +1,11 @@
-# @xiangnanscu/lua2js
+# @xiangnanscu/amap
 
-[@xiangnanscu/lua2js](https://xiangnanscu.github.io/lua2js/) transform lua to js literally.
+[@xiangnanscu/amap](https://xiangnanscu.github.io/amap/) transform lua to js literally.
 
 # Install
 
 ```sh
-npm install -g @xiangnanscu/lua2js
+npm install -g @xiangnanscu/amap
 ```
 
 # Usage
@@ -15,7 +15,7 @@ npm install -g @xiangnanscu/lua2js
 Concat one or more js files and transform them to one lua string:
 
 ```sh
-lua2js [options] file1, file2, ...
+amap [options] file1, file2, ...
 ```
 
 where options are:
@@ -48,27 +48,27 @@ const defaultOptions = {
 Basic:
 
 ```sh
-lua2js foo.lua > foo.js
+amap foo.lua > foo.js
 ```
 
 To disable a feature `--no-[option]`:
 
 ```sh
-lua2js --no-camelStyle foo.lua
+amap --no-camelStyle foo.lua
 ```
 
 To enable a feature `--[option]`:
 
 ```sh
-lua2js --camelStyle foo.lua
+amap --camelStyle foo.lua
 ```
 
 ## api
 
 ```js
-import { lua2js } from "lua2js";
+import { amap } from "amap";
 
-const jscode = lua2js(`local snake_var = 1`, { camelStyle: true });
+const jscode = amap(`local snake_var = 1`, { camelStyle: true });
 // let snakeVar = 1;
 ```
 

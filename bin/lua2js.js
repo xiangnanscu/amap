@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { lua2js, defaultOptions } from "../src/lua2js.mjs";
+import { amap, defaultOptions } from "../src/amap.mjs";
 import fs from "fs";
 import yargsParser from "yargs-parser";
 
@@ -15,6 +15,6 @@ const files = argv._;
 // console.log(argv);
 files.forEach((file) => {
   const luaCode = fs.readFileSync(file, "utf8");
-  const jsCode = lua2js(luaCode, argv);
+  const jsCode = amap(luaCode, argv);
   console.log(jsCode);
 });
