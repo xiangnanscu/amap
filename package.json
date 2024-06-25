@@ -13,6 +13,8 @@
     "rc": "npm run push",
     "commit": "git add . && git commit -am ",
     "c": "npm run commit",
+    "g": "npm run commit",
+    "postg": "npm run postpush",
     "push": "npm run commit",
     "_push": "git push origin",
     "_pull": "git pull origin",
