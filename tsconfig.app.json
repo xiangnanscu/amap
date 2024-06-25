@@ -4,8 +4,8 @@
     "env.d.ts",
     "src/**/*",
     "src/**/*.vue",
-    "views/AboutView.vue",
-    "views/HomeView.vue"
+    "views/About.vue",
+    "views/Home.vue"
   ],
   "exclude": [
     "src/**/__tests__/*"

@@ -32,6 +32,7 @@ onUnmounted(() => {
 </script>
 
 <template>
+  haha
   <div id="container"></div>
 </template>
 

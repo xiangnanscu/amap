@@ -15,7 +15,7 @@ export default defineConfig({
   plugins: [
     // https://github.com/unplugin/unplugin-vue-components?tab=readme-ov-file#configuration
     Components({
-      dirs: ["./src/components", "./src/localComponents"],
+      dirs: ["./components", "./src/components", "./src/localComponents"],
       extensions: ["vue"],
       dts: "./src/unplugin/components.d.ts",
       directoryAsNamespace: true,
@@ -61,6 +61,9 @@ export default defineConfig({
         /\.vue\?vue/, // .vue
       ],
       dirs: [
+        "./components", // only root modules
+        "./composables", // only root modules
+        "./globals",
         "./src/components", // only root modules
         "./src/composables", // only root modules
         "./src/globals",
