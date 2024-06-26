@@ -4,5 +4,5 @@ import { onMounted } from "vue";
 
 <template>
   <RouterLink to="/Home">Home</RouterLink>
-  <RouterView></RouterView>
+  <suspense><router-view /></suspense>
 </template>
