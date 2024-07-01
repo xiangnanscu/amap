@@ -6,6 +6,7 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
+  const amapUtils: typeof import('../../globals/index.mjs')['amapUtils']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
   const computed: typeof import('vue')['computed']
@@ -32,14 +33,15 @@ declare global {
   const eagerComputed: typeof import('@vueuse/core')['eagerComputed']
   const effectScope: typeof import('vue')['effectScope']
   const extendRef: typeof import('@vueuse/core')['extendRef']
-  const getBounds: typeof import('../../globals/amapUtils')['getBounds']
-  const getCenterPoint: typeof import('../../globals/amapUtils')['getCenterPoint']
+  const getBounds: (typeof import("../../globals/amapUtils"))["getBounds"]
+  const getCenterPoint: (typeof import("../../globals/amapUtils"))["getCenterPoint"]
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
   const getCurrentScope: typeof import('vue')['getCurrentScope']
-  const getImageGPS: typeof import('../../globals/imageUtils.js')['getImageGPS']
-  const getZoomLevel: typeof import('../../globals/amapUtils')['getZoomLevel']
+  const getImageGPS: (typeof import("../lib/imageUtils.mjs"))["getImageGPS"]
+  const getZoomLevel: (typeof import("../../globals/amapUtils"))["getZoomLevel"]
   const h: typeof import('vue')['h']
   const ignorableWatch: typeof import('@vueuse/core')['ignorableWatch']
+  const imageUtils: typeof import('../../globals/index.mjs')['imageUtils']
   const inject: typeof import('vue')['inject']
   const injectLocal: typeof import('@vueuse/core')['injectLocal']
   const isDefined: typeof import('@vueuse/core')['isDefined']
@@ -47,7 +49,7 @@ declare global {
   const isReactive: typeof import('vue')['isReactive']
   const isReadonly: typeof import('vue')['isReadonly']
   const isRef: typeof import('vue')['isRef']
-  const log: typeof import('../../globals/utils')['log']
+  const log: typeof import('../../globals/index.mjs')['log']
   const makeDestructurable: typeof import('@vueuse/core')['makeDestructurable']
   const markRaw: typeof import('vue')['markRaw']
   const nextTick: typeof import('vue')['nextTick']
@@ -70,11 +72,11 @@ declare global {
   const onStartTyping: typeof import('@vueuse/core')['onStartTyping']
   const onUnmounted: typeof import('vue')['onUnmounted']
   const onUpdated: typeof import('vue')['onUpdated']
-  const parseImage: typeof import('../../globals/imageUtils.js')['parseImage']
-  const parseImage2: typeof import('../../globals/imageUtils.js')['parseImage2']
-  const parseImageBlob: typeof import('../../globals/imageUtils.js')['parseImageBlob']
-  const parseImageByUrl: typeof import('../../globals/imageUtils.js')['parseImageByUrl']
-  const parseImageUrl: typeof import('../../globals/imageUtils.js')['parseImageUrl']
+  const parseImage: (typeof import("../lib/imageUtils.mjs"))["parseImage"]
+  const parseImage2: (typeof import("../lib/imageUtils.mjs"))["parseImage2"]
+  const parseImageBlob: (typeof import("../lib/imageUtils.mjs"))["parseImageBlob"]
+  const parseImageByUrl: (typeof import("../lib/imageUtils.mjs"))["parseImageByUrl"]
+  const parseImageUrl: (typeof import("../lib/imageUtils.mjs"))["parseImageUrl"]
   const pausableWatch: typeof import('@vueuse/core')['pausableWatch']
   const provide: typeof import('vue')['provide']
   const provideLocal: typeof import('@vueuse/core')['provideLocal']
@@ -306,6 +308,7 @@ declare module 'vue' {
   interface GlobalComponents {}
   interface ComponentCustomProperties {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly amapUtils: UnwrapRef<typeof import('../../globals/index.mjs')['amapUtils']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
@@ -332,14 +335,11 @@ declare module 'vue' {
     readonly eagerComputed: UnwrapRef<typeof import('@vueuse/core')['eagerComputed']>
     readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
     readonly extendRef: UnwrapRef<typeof import('@vueuse/core')['extendRef']>
-    readonly getBounds: UnwrapRef<typeof import('../../globals/amapUtils')['getBounds']>
-    readonly getCenterPoint: UnwrapRef<typeof import('../../globals/amapUtils')['getCenterPoint']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
-    readonly getImageGPS: UnwrapRef<typeof import('../../globals/imageUtils.js')['getImageGPS']>
-    readonly getZoomLevel: UnwrapRef<typeof import('../../globals/amapUtils')['getZoomLevel']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
     readonly ignorableWatch: UnwrapRef<typeof import('@vueuse/core')['ignorableWatch']>
+    readonly imageUtils: UnwrapRef<typeof import('../../globals/index.mjs')['imageUtils']>
     readonly inject: UnwrapRef<typeof import('vue')['inject']>
     readonly injectLocal: UnwrapRef<typeof import('@vueuse/core')['injectLocal']>
     readonly isDefined: UnwrapRef<typeof import('@vueuse/core')['isDefined']>
@@ -347,7 +347,7 @@ declare module 'vue' {
     readonly isReactive: UnwrapRef<typeof import('vue')['isReactive']>
     readonly isReadonly: UnwrapRef<typeof import('vue')['isReadonly']>
     readonly isRef: UnwrapRef<typeof import('vue')['isRef']>
-    readonly log: UnwrapRef<typeof import('../../globals/utils')['log']>
+    readonly log: UnwrapRef<typeof import('../../globals/index.mjs')['log']>
     readonly makeDestructurable: UnwrapRef<typeof import('@vueuse/core')['makeDestructurable']>
     readonly markRaw: UnwrapRef<typeof import('vue')['markRaw']>
     readonly nextTick: UnwrapRef<typeof import('vue')['nextTick']>
@@ -370,9 +370,6 @@ declare module 'vue' {
     readonly onStartTyping: UnwrapRef<typeof import('@vueuse/core')['onStartTyping']>
     readonly onUnmounted: UnwrapRef<typeof import('vue')['onUnmounted']>
     readonly onUpdated: UnwrapRef<typeof import('vue')['onUpdated']>
-    readonly parseImage: UnwrapRef<typeof import('../../globals/imageUtils.js')['parseImage']>
-    readonly parseImageBlob: UnwrapRef<typeof import('../../globals/imageUtils.js')['parseImageBlob']>
-    readonly parseImageUrl: UnwrapRef<typeof import('../../globals/imageUtils.js')['parseImageUrl']>
     readonly pausableWatch: UnwrapRef<typeof import('@vueuse/core')['pausableWatch']>
     readonly provide: UnwrapRef<typeof import('vue')['provide']>
     readonly provideLocal: UnwrapRef<typeof import('@vueuse/core')['provideLocal']>
@@ -597,6 +594,7 @@ declare module '@vue/runtime-core' {
   interface GlobalComponents {}
   interface ComponentCustomProperties {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly amapUtils: UnwrapRef<typeof import('../../globals/index.mjs')['amapUtils']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
@@ -623,14 +621,11 @@ declare module '@vue/runtime-core' {
     readonly eagerComputed: UnwrapRef<typeof import('@vueuse/core')['eagerComputed']>
     readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
     readonly extendRef: UnwrapRef<typeof import('@vueuse/core')['extendRef']>
-    readonly getBounds: UnwrapRef<typeof import('../../globals/amapUtils')['getBounds']>
-    readonly getCenterPoint: UnwrapRef<typeof import('../../globals/amapUtils')['getCenterPoint']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
-    readonly getImageGPS: UnwrapRef<typeof import('../../globals/imageUtils.js')['getImageGPS']>
-    readonly getZoomLevel: UnwrapRef<typeof import('../../globals/amapUtils')['getZoomLevel']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
     readonly ignorableWatch: UnwrapRef<typeof import('@vueuse/core')['ignorableWatch']>
+    readonly imageUtils: UnwrapRef<typeof import('../../globals/index.mjs')['imageUtils']>
     readonly inject: UnwrapRef<typeof import('vue')['inject']>
     readonly injectLocal: UnwrapRef<typeof import('@vueuse/core')['injectLocal']>
     readonly isDefined: UnwrapRef<typeof import('@vueuse/core')['isDefined']>
@@ -638,7 +633,7 @@ declare module '@vue/runtime-core' {
     readonly isReactive: UnwrapRef<typeof import('vue')['isReactive']>
     readonly isReadonly: UnwrapRef<typeof import('vue')['isReadonly']>
     readonly isRef: UnwrapRef<typeof import('vue')['isRef']>
-    readonly log: UnwrapRef<typeof import('../../globals/utils')['log']>
+    readonly log: UnwrapRef<typeof import('../../globals/index.mjs')['log']>
     readonly makeDestructurable: UnwrapRef<typeof import('@vueuse/core')['makeDestructurable']>
     readonly markRaw: UnwrapRef<typeof import('vue')['markRaw']>
     readonly nextTick: UnwrapRef<typeof import('vue')['nextTick']>
@@ -661,9 +656,6 @@ declare module '@vue/runtime-core' {
     readonly onStartTyping: UnwrapRef<typeof import('@vueuse/core')['onStartTyping']>
     readonly onUnmounted: UnwrapRef<typeof import('vue')['onUnmounted']>
     readonly onUpdated: UnwrapRef<typeof import('vue')['onUpdated']>
-    readonly parseImage: UnwrapRef<typeof import('../../globals/imageUtils.js')['parseImage']>
-    readonly parseImageBlob: UnwrapRef<typeof import('../../globals/imageUtils.js')['parseImageBlob']>
-    readonly parseImageUrl: UnwrapRef<typeof import('../../globals/imageUtils.js')['parseImageUrl']>
     readonly pausableWatch: UnwrapRef<typeof import('@vueuse/core')['pausableWatch']>
     readonly provide: UnwrapRef<typeof import('vue')['provide']>
     readonly provideLocal: UnwrapRef<typeof import('@vueuse/core')['provideLocal']>

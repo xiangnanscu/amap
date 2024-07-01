@@ -298,6 +298,8 @@
     "parseImageByUrl": true,
     "parseImage2": true,
     "parseImageBlob": true,
-    "parseImageUrl": true
+    "parseImageUrl": true,
+    "amapUtils": true,
+    "imageUtils": true
   }
 }

@@ -1,8 +1,4 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
-import { EXIF } from "exif-js";
-// import exif from "exif-reader";
-
 const imageURL = "https://lzwlkj.oss-cn-shenzhen.aliyuncs.com/jahy/vc-upload-1713342032387-22.jpg";
 
 // fetch(imageURL).then(async (response) => {
@@ -28,7 +24,7 @@ const imageURL = "https://lzwlkj.oss-cn-shenzhen.aliyuncs.com/jahy/vc-upload-171
 const img1 = ref();
 onMounted(async () => {
   img1.value = document.getElementById("img1");
-  const buf = await parseImage(imageURL);
+  const buf = await imageUtils.parseImage(imageURL);
   console.log({ buf });
   // EXIF.getData(img1.value, function () {
   //   const make = EXIF.getAllTags(this);
@@ -38,7 +34,7 @@ onMounted(async () => {
 // 用你的图片URL替换这里的URL
 
 const upload = async (e) => {
-  const res = await parseImage(e.target.files[0]);
+  const res = await imageUtils.parseImage(e.target.files[0]);
   log("upload", res);
 };
 const text = ref("");

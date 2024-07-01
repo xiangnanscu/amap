@@ -1,5 +1,5 @@
 import { useFetch } from "@vueuse/core";
-import { EXIF } from "exif-js";
+import { EXIF } from "@xnscu/exif-js";
 
 export function parseImageBlob(blob) {
   return EXIF.readFromBinaryFile(blob);
