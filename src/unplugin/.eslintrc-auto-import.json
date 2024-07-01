@@ -291,6 +291,13 @@
     "whenever": true,
     "getBounds": true,
     "getCenterPoint": true,
-    "getZoomLevel": true
+    "getZoomLevel": true,
+    "log": true,
+    "parseImage": true,
+    "getImageGPS": true,
+    "parseImageByUrl": true,
+    "parseImage2": true,
+    "parseImageBlob": true,
+    "parseImageUrl": true
   }
 }
