@@ -31,7 +31,7 @@ export const getZoomLevel = (bounds: [number[], number[]], mapDim: [number, numb
 
   const latZoom = Math.log((mapDim[0] * 360) / latDiff / WORLD_DIM) / Math.log(2);
   const lngZoom = Math.log((mapDim[1] * 180) / lngDiff / WORLD_DIM) / Math.log(2);
-  return Math.min(Math.min(latZoom, lngZoom), ZOOM_MAX);
+  return Math.floor(Math.min(Math.min(latZoom, lngZoom), ZOOM_MAX));
 };
 
 export const getCenterPoint = (bounds: [number[], number[]]): [number, number] => {

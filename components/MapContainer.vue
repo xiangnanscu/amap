@@ -60,10 +60,17 @@ onMounted(async () => {
       map = new AMap.Map("container", {
         // 设置地图容器id
         viewMode: "3D", // 是否为3D地图模式
-        zoom: 15, // 初始化地图级别
+        zoom: 10, // 初始化地图级别
         center: centerXY, // 初始化地图中心点位置
       });
       console.log(markers, map.getSize());
+      const { width, height } = map.getSize();
+      const bounds = getBounds(xys);
+      const mapDim = [width, height];
+      const zoomLevel = getZoomLevel(bounds, mapDim);
+      const centerPoint = getCenterPoint(bounds);
+      console.log({ zoomLevel, centerPoint, centerXY });
+      map.setZoom(zoomLevel);
       map.add(markers);
       map.on("click", function (e) {
         // Get the clicked point's coordinates
