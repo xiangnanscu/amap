@@ -24,12 +24,18 @@ const imageURL = "https://lzwlkj.oss-cn-shenzhen.aliyuncs.com/jahy/vc-upload-171
 const img1 = ref();
 onMounted(async () => {
   img1.value = document.getElementById("img1");
-  const buf = await imageUtils.parseImage(imageURL);
-  console.log({ buf });
-  // EXIF.getData(img1.value, function () {
-  //   const make = EXIF.getAllTags(this);
-  //   console.log({ make });
-  // });
+  const tags = await imageUtils.getImageGPS(imageURL);
+  log(tags);
+  for (const [k, v] of Object.entries(tags)) {
+    if (k.startsWith("GPS")) {
+      if (Array.isArray(v)) {
+        for (const e of v) {
+          log(k, e);
+        }
+      }
+      log(k, v);
+    }
+  }
 });
 // 用你的图片URL替换这里的URL
 

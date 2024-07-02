@@ -6,7 +6,7 @@
     "src/**/*.vue",
     "views/About.vue",
     "views/Home.vue"
-  ],
+, "lib"  ],
   "exclude": [
     "src/**/__tests__/*"
   ],

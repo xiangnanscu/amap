@@ -25,8 +25,8 @@
     "@amap/amap-jsapi-loader": "^1.0.1",
     "@vueuse/core": "^10.11.0",
     "@vueuse/integrations": "^10.11.0",
+    "@xnscu/exif-js": "^2.3.1",
     "dotenv": "^16.4.5",
-    "@xnscu/exif-js": "^2.3.0",
     "universal-cookie": "^6",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
