@@ -309,6 +309,15 @@
     "usePost": true,
     "useSession": true,
     "useStore": true,
-    "Http": true
+    "Http": true,
+    "useRoles": true,
+    "useUser": true,
+    "Alioss": true,
+    "Docx": true,
+    "Model": true,
+    "Validators": true,
+    "Xlsx": true,
+    "helpers": true,
+    "utils": true
   }
 }

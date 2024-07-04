@@ -27,6 +27,16 @@ function logout() {
   removeSession();
 }
 
+export const useUser = () => {
+  const { user } = useSession();
+  return user;
+};
+
+export const useRoles = () => {
+  const { roles } = useSession();
+  return roles;
+};
+
 export default () => {
   return {
     session,
