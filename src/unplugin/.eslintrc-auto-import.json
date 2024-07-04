@@ -300,6 +300,15 @@
     "parseImageBlob": true,
     "parseImageUrl": true,
     "amapUtils": true,
-    "imageUtils": true
+    "imageUtils": true,
+    "getAnonymousSession": true,
+    "index": true,
+    "removeSession": true,
+    "useAuth": true,
+    "useGet": true,
+    "usePost": true,
+    "useSession": true,
+    "useStore": true,
+    "Http": true
   }
 }
