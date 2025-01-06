@@ -325,11 +325,8 @@ import { UnwrapRef } from 'vue'
 declare module 'vue' {
   interface GlobalComponents {}
   interface ComponentCustomProperties {
-    readonly Alioss: UnwrapRef<typeof import('../../globals/index.mjs')['Alioss']>
-    readonly Docx: UnwrapRef<typeof import('../../globals/index.mjs')['Docx']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
     readonly Http: UnwrapRef<typeof import('../../globals/index.mjs')['Http']>
-    readonly Xlsx: UnwrapRef<typeof import('../../globals/index.mjs')['Xlsx']>
     readonly amapUtils: UnwrapRef<typeof import('../../globals/index.mjs')['amapUtils']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
@@ -361,7 +358,6 @@ declare module 'vue' {
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
-    readonly helpers: UnwrapRef<typeof import('../../globals/index.mjs')['helpers']>
     readonly ignorableWatch: UnwrapRef<typeof import('@vueuse/core')['ignorableWatch']>
     readonly imageUtils: UnwrapRef<typeof import('../../globals/index.mjs')['imageUtils']>
     readonly inject: UnwrapRef<typeof import('vue')['inject']>
@@ -604,7 +600,6 @@ declare module 'vue' {
     readonly useWindowFocus: UnwrapRef<typeof import('@vueuse/core')['useWindowFocus']>
     readonly useWindowScroll: UnwrapRef<typeof import('@vueuse/core')['useWindowScroll']>
     readonly useWindowSize: UnwrapRef<typeof import('@vueuse/core')['useWindowSize']>
-    readonly utils: UnwrapRef<typeof import('../../globals/index.mjs')['utils']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
     readonly watchArray: UnwrapRef<typeof import('@vueuse/core')['watchArray']>
     readonly watchAtMost: UnwrapRef<typeof import('@vueuse/core')['watchAtMost']>
@@ -626,11 +621,8 @@ declare module 'vue' {
 declare module '@vue/runtime-core' {
   interface GlobalComponents {}
   interface ComponentCustomProperties {
-    readonly Alioss: UnwrapRef<typeof import('../../globals/index.mjs')['Alioss']>
-    readonly Docx: UnwrapRef<typeof import('../../globals/index.mjs')['Docx']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
     readonly Http: UnwrapRef<typeof import('../../globals/index.mjs')['Http']>
-    readonly Xlsx: UnwrapRef<typeof import('../../globals/index.mjs')['Xlsx']>
     readonly amapUtils: UnwrapRef<typeof import('../../globals/index.mjs')['amapUtils']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
@@ -662,7 +654,6 @@ declare module '@vue/runtime-core' {
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
-    readonly helpers: UnwrapRef<typeof import('../../globals/index.mjs')['helpers']>
     readonly ignorableWatch: UnwrapRef<typeof import('@vueuse/core')['ignorableWatch']>
     readonly imageUtils: UnwrapRef<typeof import('../../globals/index.mjs')['imageUtils']>
     readonly inject: UnwrapRef<typeof import('vue')['inject']>
@@ -905,7 +896,6 @@ declare module '@vue/runtime-core' {
     readonly useWindowFocus: UnwrapRef<typeof import('@vueuse/core')['useWindowFocus']>
     readonly useWindowScroll: UnwrapRef<typeof import('@vueuse/core')['useWindowScroll']>
     readonly useWindowSize: UnwrapRef<typeof import('@vueuse/core')['useWindowSize']>
-    readonly utils: UnwrapRef<typeof import('../../globals/index.mjs')['utils']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
     readonly watchArray: UnwrapRef<typeof import('@vueuse/core')['watchArray']>
     readonly watchAtMost: UnwrapRef<typeof import('@vueuse/core')['watchAtMost']>

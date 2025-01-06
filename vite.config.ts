@@ -15,7 +15,9 @@ const { parsed: DOTENV } = config({ processEnv: {} });
 // https://vitejs.dev/config/
 export default defineConfig({
   base: "/amap/",
-  define: Object.fromEntries(Object.entries(DOTENV || {}).map(([k, v]) => [`process.env.${k}`, JSON.stringify(v)])),
+  define: Object.fromEntries(
+    Object.entries(DOTENV || {}).map(([k, v]) => [`process.env.${k}`, JSON.stringify(v)]),
+  ),
   plugins: [
     // https://github.com/unplugin/unplugin-vue-components?tab=readme-ov-file#configuration
     Components({
